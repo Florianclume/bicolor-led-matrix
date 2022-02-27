@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiColor Matrix Voltage</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            --size: 85vmin;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .scheme {
+            display: grid;
+            grid-template-areas:
+                ". column-checkboxes"
+                "row-checkboxes matrix";
+            }
+        .column-checkboxes {
+            grid-area: column-checkboxes;
+            width: var(--size);
+            padding: calc(var(--size) * 0.011041);
+            display: flex;
+            justify-content: space-between;
+        }
+        .column-control {
+            width: calc(var(--size) * 0.094637);
+            text-align: center;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+        }
+        .row-checkboxes {
+            grid-area: row-checkboxes;
+            height: var(--size);
+            padding: calc(var(--size) * 0.011041);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .row-control {
+            height: calc(var(--size) * 0.094637);
+            font-weight: bold;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+        }
+        .matrix {
+            grid-area: matrix;
+            display: flex;
+            width: var(--size);
+            height: var(--size);
+            background-color: black;
+            padding: calc(var(--size) * 0.011041);
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .row {
+            height: calc(var(--size) * 0.094637);
+            display: flex;
+            justify-content: space-between;
+        }
+        .led {
+            width: calc(var(--size) * 0.094637);
+            background-color: grey;
+        }
+
+        .green-check {
+            color: green;
+        }
+        .red-check {
+            color: darkred;
+        }
+        .cat-check {
+            color: darkblue;
+        }
+
+        .red-led {
+            background-color: red;
+        }
+        .green-led {
+            background-color: lime;
+        }
+        .red-led.green-led {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="scheme">
+        <div class="column-checkboxes">
+            <div class="column-control">
+                <label class="green-check" for="col1green">24<input type="checkbox" id="col1green"></label>
+                <label class="red-check" for="col1red">23<input type="checkbox" id="col1red"></label>
+            </div>
+            <div class="column-control">
+                <label class="green-check" for="col2green">21<input type="checkbox" id="col2green"></label>
+                <label class="red-check" for="col2red">20<input type="checkbox" id="col2red"></label>
+            </div>
+            <div class="column-control">
+                <label class="green-check" for="col3green">18<input type="checkbox" id="col3green"></label>
+                <label class="red-check" for="col3red">17<input type="checkbox" id="col3red"></label>
+            </div>
+            <div class="column-control">
+                <label class="green-check" for="col4green">15<input type="checkbox" id="col4green"></label>
+                <label class="red-check" for="col4red">14<input type="checkbox" id="col4red"></label>
+            </div>
+            <div class="column-control">
+                <label class="green-check" for="col5green">1<input type="checkbox" id="col5green"></label>
+                <label class="red-check" for="col5red">2<input type="checkbox" id="col5red"></label>
+            </div>
+            <div class="column-control">
+                <label class="green-check" for="col6green">4<input type="checkbox" id="col6green"></label>
+                <label class="red-check" for="col6red">5<input type="checkbox" id="col6red"></label>
+            </div>
+            <div class="column-control">
+                <label class="green-check" for="col7green">7<input type="checkbox" id="col7green"></label>
+                <label class="red-check" for="col7red">8<input type="checkbox" id="col7red"></label>
+            </div>
+            <div class="column-control">
+                <label class="green-check" for="col8green">10<input type="checkbox" id="col8green"></label>
+                <label class="red-check" for="col8red">11<input type="checkbox" id="col8red"></label>
+            </div>
+        </div>
+        <div class="row-checkboxes">
+            <div class="row-control">
+                <label class="cat-check" for="row1cat">22<input type="checkbox" id="row1cat" checked></label>
+            </div>
+            <div class="row-control">
+                <label class="cat-check" for="row2cat">19<input type="checkbox" id="row2cat" checked></label>
+            </div>
+            <div class="row-control">
+                <label class="cat-check" for="row3cat">16<input type="checkbox" id="row3cat" checked></label>
+            </div>
+            <div class="row-control">
+                <label class="cat-check" for="row4cat">13<input type="checkbox" id="row4cat" checked></label>
+            </div>
+            <div class="row-control">
+                <label class="cat-check" for="row5cat">3<input type="checkbox" id="row5cat" checked></label>
+            </div>
+            <div class="row-control">
+                <label class="cat-check" for="row6cat">6<input type="checkbox" id="row6cat" checked></label>
+            </div>
+            <div class="row-control">
+                <label class="cat-check" for="row7cat">9<input type="checkbox" id="row7cat" checked></label>
+            </div>
+            <div class="row-control">
+                <label class="cat-check" for="row8cat">12<input type="checkbox" id="row8cat" checked></label>
+            </div>
+        </div>
+        <div class="matrix">
+            <div class="row">
+                <div class="led" id="row1led1"></div>
+                <div class="led" id="row1led2"></div>
+                <div class="led" id="row1led3"></div>
+                <div class="led" id="row1led4"></div>
+                <div class="led" id="row1led5"></div>
+                <div class="led" id="row1led6"></div>
+                <div class="led" id="row1led7"></div>
+                <div class="led" id="row1led8"></div>
+            </div>
+            <div class="row">
+                <div class="led" id="row2led1"></div>
+                <div class="led" id="row2led2"></div>
+                <div class="led" id="row2led3"></div>
+                <div class="led" id="row2led4"></div>
+                <div class="led" id="row2led5"></div>
+                <div class="led" id="row2led6"></div>
+                <div class="led" id="row2led7"></div>
+                <div class="led" id="row2led8"></div>
+            </div>
+            <div class="row">
+                <div class="led" id="row3led1"></div>
+                <div class="led" id="row3led2"></div>
+                <div class="led" id="row3led3"></div>
+                <div class="led" id="row3led4"></div>
+                <div class="led" id="row3led5"></div>
+                <div class="led" id="row3led6"></div>
+                <div class="led" id="row3led7"></div>
+                <div class="led" id="row3led8"></div>
+            </div>
+            <div class="row">
+                <div class="led" id="row4led1"></div>
+                <div class="led" id="row4led2"></div>
+                <div class="led" id="row4led3"></div>
+                <div class="led" id="row4led4"></div>
+                <div class="led" id="row4led5"></div>
+                <div class="led" id="row4led6"></div>
+                <div class="led" id="row4led7"></div>
+                <div class="led" id="row4led8"></div>
+            </div>
+            <div class="row">
+                <div class="led" id="row5led1"></div>
+                <div class="led" id="row5led2"></div>
+                <div class="led" id="row5led3"></div>
+                <div class="led" id="row5led4"></div>
+                <div class="led" id="row5led5"></div>
+                <div class="led" id="row5led6"></div>
+                <div class="led" id="row5led7"></div>
+                <div class="led" id="row5led8"></div>
+            </div>
+            <div class="row">
+                <div class="led" id="row6led1"></div>
+                <div class="led" id="row6led2"></div>
+                <div class="led" id="row6led3"></div>
+                <div class="led" id="row6led4"></div>
+                <div class="led" id="row6led5"></div>
+                <div class="led" id="row6led6"></div>
+                <div class="led" id="row6led7"></div>
+                <div class="led" id="row6led8"></div>
+            </div>
+            <div class="row">
+                <div class="led" id="row7led1"></div>
+                <div class="led" id="row7led2"></div>
+                <div class="led" id="row7led3"></div>
+                <div class="led" id="row7led4"></div>
+                <div class="led" id="row7led5"></div>
+                <div class="led" id="row7led6"></div>
+                <div class="led" id="row7led7"></div>
+                <div class="led" id="row7led8"></div>
+            </div>
+            <div class="row">
+                <div class="led" id="row8led1"></div>
+                <div class="led" id="row8led2"></div>
+                <div class="led" id="row8led3"></div>
+                <div class="led" id="row8led4"></div>
+                <div class="led" id="row8led5"></div>
+                <div class="led" id="row8led6"></div>
+                <div class="led" id="row8led7"></div>
+                <div class="led" id="row8led8"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('change', e => {
+            for (let i = 1; i <= 8; i++) {
+                for (let j = 1; j <= 8; j++) {
+                    const led = document.getElementById(`row${i}led${j}`)
+                    const red = document.getElementById(`col${j}red`).checked
+                    const green = document.getElementById(`col${j}green`).checked
+                    const cat = document.getElementById(`row${i}cat`).checked
+
+                    if (red && !cat) {
+                        led.classList.add('red-led')
+                    } else {
+                        led.classList.remove('red-led')
+                    }
+                    if (green && !cat) {
+                        led.classList.add('green-led')
+                    } else {
+                        led.classList.remove('green-led')
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>
