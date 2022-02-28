@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 317 317">
+    <rect width="317" height="317" fill="black"/>
+
+    <rect width="30" height="30" id="r1c1" x="3.5" y="3.5" fill="grey"/>
+    <rect width="30" height="30" id="r1c2" x="43.5" y="3.5" fill="grey"/>
+    <rect width="30" height="30" id="r1c3" x="83.5" y="3.5" fill="grey"/>
+    <rect width="30" height="30" id="r1c4" x="123.5" y="3.5" fill="grey"/>
+    <rect width="30" height="30" id="r1c5" x="163.5" y="3.5" fill="grey"/>
+    <rect width="30" height="30" id="r1c6" x="203.5" y="3.5" fill="grey"/>
+    <rect width="30" height="30" id="r1c7" x="243.5" y="3.5" fill="grey"/>
+    <rect width="30" height="30" id="r1c8" x="283.5" y="3.5" fill="grey"/>
+
+    <rect width="30" height="30" id="r2c1" x="3.5" y="43.5" fill="grey"/>
+    <rect width="30" height="30" id="r2c2" x="43.5" y="43.5" fill="grey"/>
+    <rect width="30" height="30" id="r2c3" x="83.5" y="43.5" fill="grey"/>
+    <rect width="30" height="30" id="r2c4" x="123.5" y="43.5" fill="grey"/>
+    <rect width="30" height="30" id="r2c5" x="163.5" y="43.5" fill="grey"/>
+    <rect width="30" height="30" id="r2c6" x="203.5" y="43.5" fill="grey"/>
+    <rect width="30" height="30" id="r2c7" x="243.5" y="43.5" fill="grey"/>
+    <rect width="30" height="30" id="r2c8" x="283.5" y="43.5" fill="grey"/>
+
+    <rect width="30" height="30" id="r3c1" x="3.5" y="83.5" fill="grey"/>
+    <rect width="30" height="30" id="r3c2" x="43.5" y="83.5" fill="grey"/>
+    <rect width="30" height="30" id="r3c3" x="83.5" y="83.5" fill="grey"/>
+    <rect width="30" height="30" id="r3c4" x="123.5" y="83.5" fill="grey"/>
+    <rect width="30" height="30" id="r3c5" x="163.5" y="83.5" fill="grey"/>
+    <rect width="30" height="30" id="r3c6" x="203.5" y="83.5" fill="grey"/>
+    <rect width="30" height="30" id="r3c7" x="243.5" y="83.5" fill="grey"/>
+    <rect width="30" height="30" id="r3c8" x="283.5" y="83.5" fill="grey"/>
+    
+    <rect width="30" height="30" id="r4c1" x="3.5" y="123.5" fill="grey"/>
+    <rect width="30" height="30" id="r4c2" x="43.5" y="123.5" fill="grey"/>
+    <rect width="30" height="30" id="r4c3" x="83.5" y="123.5" fill="grey"/>
+    <rect width="30" height="30" id="r4c4" x="123.5" y="123.5" fill="grey"/>
+    <rect width="30" height="30" id="r4c5" x="163.5" y="123.5" fill="grey"/>
+    <rect width="30" height="30" id="r4c6" x="203.5" y="123.5" fill="grey"/>
+    <rect width="30" height="30" id="r4c7" x="243.5" y="123.5" fill="grey"/>
+    <rect width="30" height="30" id="r4c8" x="283.5" y="123.5" fill="grey"/>
+
+    <rect width="30" height="30" id="r5c1" x="3.5" y="163.5" fill="grey"/>
+    <rect width="30" height="30" id="r5c2" x="43.5" y="163.5" fill="grey"/>
+    <rect width="30" height="30" id="r5c3" x="83.5" y="163.5" fill="grey"/>
+    <rect width="30" height="30" id="r5c4" x="123.5" y="163.5" fill="grey"/>
+    <rect width="30" height="30" id="r5c5" x="163.5" y="163.5" fill="grey"/>
+    <rect width="30" height="30" id="r5c6" x="203.5" y="163.5" fill="grey"/>
+    <rect width="30" height="30" id="r5c7" x="243.5" y="163.5" fill="grey"/>
+    <rect width="30" height="30" id="r5c8" x="283.5" y="163.5" fill="grey"/>
+
+    <rect width="30" height="30" id="r6c1" x="3.5" y="203.5" fill="grey"/>
+    <rect width="30" height="30" id="r6c2" x="43.5" y="203.5" fill="grey"/>
+    <rect width="30" height="30" id="r6c3" x="83.5" y="203.5" fill="grey"/>
+    <rect width="30" height="30" id="r6c4" x="123.5" y="203.5" fill="grey"/>
+    <rect width="30" height="30" id="r6c5" x="163.5" y="203.5" fill="grey"/>
+    <rect width="30" height="30" id="r6c6" x="203.5" y="203.5" fill="grey"/>
+    <rect width="30" height="30" id="r6c7" x="243.5" y="203.5" fill="grey"/>
+    <rect width="30" height="30" id="r6c8" x="283.5" y="203.5" fill="grey"/>
+
+    <rect width="30" height="30" id="r7c1" x="3.5" y="243.5" fill="grey"/>
+    <rect width="30" height="30" id="r7c2" x="43.5" y="243.5" fill="grey"/>
+    <rect width="30" height="30" id="r7c3" x="83.5" y="243.5" fill="grey"/>
+    <rect width="30" height="30" id="r7c4" x="123.5" y="243.5" fill="grey"/>
+    <rect width="30" height="30" id="r7c5" x="163.5" y="243.5" fill="grey"/>
+    <rect width="30" height="30" id="r7c6" x="203.5" y="243.5" fill="grey"/>
+    <rect width="30" height="30" id="r7c7" x="243.5" y="243.5" fill="grey"/>
+    <rect width="30" height="30" id="r7c8" x="283.5" y="243.5" fill="grey"/>
+
+    <rect width="30" height="30" id="r8c1" x="3.5" y="283.5" fill="grey"/>
+    <rect width="30" height="30" id="r8c2" x="43.5" y="283.5" fill="grey"/>
+    <rect width="30" height="30" id="r8c3" x="83.5" y="283.5" fill="grey"/>
+    <rect width="30" height="30" id="r8c4" x="123.5" y="283.5" fill="grey"/>
+    <rect width="30" height="30" id="r8c5" x="163.5" y="283.5" fill="grey"/>
+    <rect width="30" height="30" id="r8c6" x="203.5" y="283.5" fill="grey"/>
+    <rect width="30" height="30" id="r8c7" x="243.5" y="283.5" fill="grey"/>
+    <rect width="30" height="30" id="r8c8" x="283.5" y="283.5" fill="grey"/>
+
+    <script>
+    // <![CDATA[
+        const animation = function* () {
+            for (const color of ['red', 'orange', 'lime', 'orange', 'red', 'grey']) {
+                for (let a = 2; a <= 16; a++) {
+                    for (let i = 1; i <= 8; i++) {
+                        for (let j = 1; j <= 8; j++) {
+                            if (i + j <= a) {
+                                document.getElementById(`r${i}c${j}`).setAttribute('fill', color)
+                            }
+                        }
+                    }
+                    yield delay(30)
+                }
+            }
+        }
+
+        function delay(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function render() {
+            const frames = animation()
+            let rendering;
+            do {
+                rendering = frames.next()
+                await rendering.value
+            } while (!rendering.done)
+        }
+        render()
+    // ]]>
+    </script>
+</svg>
