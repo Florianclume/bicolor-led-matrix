@@ -4,28 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BiColor Matrix Simulator</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         html {
             height: 100vh;
         }
         .container {
+            margin: 0 2em;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
         }
-        .column {
-            margin: 2em 8vmin;
-            margin-bottom: 0;
+        @media all and (max-width: 1024px) {
+            .container {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+            }
         }
-        textarea {
+        #codeArduino {
+            display: block;
             width: 100%;
-            height: 80%;
+            height: 40em;
+            margin-bottom: 1em;
+        }
+        #display {
+            margin: 4em;
+            min-width: 200px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="column">
+            <h1>BiColor Matrix Simulator</h1>
+            <a href="help.html">What is it?</a>
             <textarea id="codeArduino">
 const int rclk = 4;
 const int srclk = 3;
@@ -62,152 +76,78 @@ void loop()
         <div class="column">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 317 317" id="display">
                 <rect width="317" height="317" fill="black"/>
-            
-                <rect width="30" height="30" x="3.5" y="3.5" fill="grey"/>
-                <rect width="30" height="30" x="43.5" y="3.5" fill="grey"/>
-                <rect width="30" height="30" x="83.5" y="3.5" fill="grey"/>
-                <rect width="30" height="30" x="123.5" y="3.5" fill="grey"/>
-                <rect width="30" height="30" x="163.5" y="3.5" fill="grey"/>
-                <rect width="30" height="30" x="203.5" y="3.5" fill="grey"/>
-                <rect width="30" height="30" x="243.5" y="3.5" fill="grey"/>
-                <rect width="30" height="30" x="283.5" y="3.5" fill="grey"/>
-            
-                <rect width="30" height="30" x="3.5" y="43.5" fill="grey"/>
-                <rect width="30" height="30" x="43.5" y="43.5" fill="grey"/>
-                <rect width="30" height="30" x="83.5" y="43.5" fill="grey"/>
-                <rect width="30" height="30" x="123.5" y="43.5" fill="grey"/>
-                <rect width="30" height="30" x="163.5" y="43.5" fill="grey"/>
-                <rect width="30" height="30" x="203.5" y="43.5" fill="grey"/>
-                <rect width="30" height="30" x="243.5" y="43.5" fill="grey"/>
-                <rect width="30" height="30" x="283.5" y="43.5" fill="grey"/>
-            
-                <rect width="30" height="30" x="3.5" y="83.5" fill="grey"/>
-                <rect width="30" height="30" x="43.5" y="83.5" fill="grey"/>
-                <rect width="30" height="30" x="83.5" y="83.5" fill="grey"/>
-                <rect width="30" height="30" x="123.5" y="83.5" fill="grey"/>
-                <rect width="30" height="30" x="163.5" y="83.5" fill="grey"/>
-                <rect width="30" height="30" x="203.5" y="83.5" fill="grey"/>
-                <rect width="30" height="30" x="243.5" y="83.5" fill="grey"/>
-                <rect width="30" height="30" x="283.5" y="83.5" fill="grey"/>
-                
-                <rect width="30" height="30" x="3.5" y="123.5" fill="grey"/>
-                <rect width="30" height="30" x="43.5" y="123.5" fill="grey"/>
-                <rect width="30" height="30" x="83.5" y="123.5" fill="grey"/>
-                <rect width="30" height="30" x="123.5" y="123.5" fill="grey"/>
-                <rect width="30" height="30" x="163.5" y="123.5" fill="grey"/>
-                <rect width="30" height="30" x="203.5" y="123.5" fill="grey"/>
-                <rect width="30" height="30" x="243.5" y="123.5" fill="grey"/>
-                <rect width="30" height="30" x="283.5" y="123.5" fill="grey"/>
-            
-                <rect width="30" height="30" x="3.5" y="163.5" fill="grey"/>
-                <rect width="30" height="30" x="43.5" y="163.5" fill="grey"/>
-                <rect width="30" height="30" x="83.5" y="163.5" fill="grey"/>
-                <rect width="30" height="30" x="123.5" y="163.5" fill="grey"/>
-                <rect width="30" height="30" x="163.5" y="163.5" fill="grey"/>
-                <rect width="30" height="30" x="203.5" y="163.5" fill="grey"/>
-                <rect width="30" height="30" x="243.5" y="163.5" fill="grey"/>
-                <rect width="30" height="30" x="283.5" y="163.5" fill="grey"/>
-            
-                <rect width="30" height="30" x="3.5" y="203.5" fill="grey"/>
-                <rect width="30" height="30" x="43.5" y="203.5" fill="grey"/>
-                <rect width="30" height="30" x="83.5" y="203.5" fill="grey"/>
-                <rect width="30" height="30" x="123.5" y="203.5" fill="grey"/>
-                <rect width="30" height="30" x="163.5" y="203.5" fill="grey"/>
-                <rect width="30" height="30" x="203.5" y="203.5" fill="grey"/>
-                <rect width="30" height="30" x="243.5" y="203.5" fill="grey"/>
-                <rect width="30" height="30" x="283.5" y="203.5" fill="grey"/>
-            
-                <rect width="30" height="30" x="3.5" y="243.5" fill="grey"/>
-                <rect width="30" height="30" x="43.5" y="243.5" fill="grey"/>
-                <rect width="30" height="30" x="83.5" y="243.5" fill="grey"/>
-                <rect width="30" height="30" x="123.5" y="243.5" fill="grey"/>
-                <rect width="30" height="30" x="163.5" y="243.5" fill="grey"/>
-                <rect width="30" height="30" x="203.5" y="243.5" fill="grey"/>
-                <rect width="30" height="30" x="243.5" y="243.5" fill="grey"/>
-                <rect width="30" height="30" x="283.5" y="243.5" fill="grey"/>
-            
-                <rect width="30" height="30" x="3.5" y="283.5" fill="grey"/>
-                <rect width="30" height="30" x="43.5" y="283.5" fill="grey"/>
-                <rect width="30" height="30" x="83.5" y="283.5" fill="grey"/>
-                <rect width="30" height="30" x="123.5" y="283.5" fill="grey"/>
-                <rect width="30" height="30" x="163.5" y="283.5" fill="grey"/>
-                <rect width="30" height="30" x="203.5" y="283.5" fill="grey"/>
-                <rect width="30" height="30" x="243.5" y="283.5" fill="grey"/>
-                <rect width="30" height="30" x="283.5" y="283.5" fill="grey"/>
-            
-<!--  -->
 
-                <rect width="30" height="30" id="r1c1" x="3.5" y="3.5" fill="transparent"/>
-                <rect width="30" height="30" id="r1c2" x="43.5" y="3.5" fill="transparent"/>
-                <rect width="30" height="30" id="r1c3" x="83.5" y="3.5" fill="transparent"/>
-                <rect width="30" height="30" id="r1c4" x="123.5" y="3.5" fill="transparent"/>
-                <rect width="30" height="30" id="r1c5" x="163.5" y="3.5" fill="transparent"/>
-                <rect width="30" height="30" id="r1c6" x="203.5" y="3.5" fill="transparent"/>
-                <rect width="30" height="30" id="r1c7" x="243.5" y="3.5" fill="transparent"/>
-                <rect width="30" height="30" id="r1c8" x="283.5" y="3.5" fill="transparent"/>
+                <rect width="30" height="30" id="r1c1" x="3.5" y="3.5" fill="grey"/>
+                <rect width="30" height="30" id="r1c2" x="43.5" y="3.5" fill="grey"/>
+                <rect width="30" height="30" id="r1c3" x="83.5" y="3.5" fill="grey"/>
+                <rect width="30" height="30" id="r1c4" x="123.5" y="3.5" fill="grey"/>
+                <rect width="30" height="30" id="r1c5" x="163.5" y="3.5" fill="grey"/>
+                <rect width="30" height="30" id="r1c6" x="203.5" y="3.5" fill="grey"/>
+                <rect width="30" height="30" id="r1c7" x="243.5" y="3.5" fill="grey"/>
+                <rect width="30" height="30" id="r1c8" x="283.5" y="3.5" fill="grey"/>
             
-                <rect width="30" height="30" id="r2c1" x="3.5" y="43.5" fill="transparent"/>
-                <rect width="30" height="30" id="r2c2" x="43.5" y="43.5" fill="transparent"/>
-                <rect width="30" height="30" id="r2c3" x="83.5" y="43.5" fill="transparent"/>
-                <rect width="30" height="30" id="r2c4" x="123.5" y="43.5" fill="transparent"/>
-                <rect width="30" height="30" id="r2c5" x="163.5" y="43.5" fill="transparent"/>
-                <rect width="30" height="30" id="r2c6" x="203.5" y="43.5" fill="transparent"/>
-                <rect width="30" height="30" id="r2c7" x="243.5" y="43.5" fill="transparent"/>
-                <rect width="30" height="30" id="r2c8" x="283.5" y="43.5" fill="transparent"/>
+                <rect width="30" height="30" id="r2c1" x="3.5" y="43.5" fill="grey"/>
+                <rect width="30" height="30" id="r2c2" x="43.5" y="43.5" fill="grey"/>
+                <rect width="30" height="30" id="r2c3" x="83.5" y="43.5" fill="grey"/>
+                <rect width="30" height="30" id="r2c4" x="123.5" y="43.5" fill="grey"/>
+                <rect width="30" height="30" id="r2c5" x="163.5" y="43.5" fill="grey"/>
+                <rect width="30" height="30" id="r2c6" x="203.5" y="43.5" fill="grey"/>
+                <rect width="30" height="30" id="r2c7" x="243.5" y="43.5" fill="grey"/>
+                <rect width="30" height="30" id="r2c8" x="283.5" y="43.5" fill="grey"/>
             
-                <rect width="30" height="30" id="r3c1" x="3.5" y="83.5" fill="transparent"/>
-                <rect width="30" height="30" id="r3c2" x="43.5" y="83.5" fill="transparent"/>
-                <rect width="30" height="30" id="r3c3" x="83.5" y="83.5" fill="transparent"/>
-                <rect width="30" height="30" id="r3c4" x="123.5" y="83.5" fill="transparent"/>
-                <rect width="30" height="30" id="r3c5" x="163.5" y="83.5" fill="transparent"/>
-                <rect width="30" height="30" id="r3c6" x="203.5" y="83.5" fill="transparent"/>
-                <rect width="30" height="30" id="r3c7" x="243.5" y="83.5" fill="transparent"/>
-                <rect width="30" height="30" id="r3c8" x="283.5" y="83.5" fill="transparent"/>
+                <rect width="30" height="30" id="r3c1" x="3.5" y="83.5" fill="grey"/>
+                <rect width="30" height="30" id="r3c2" x="43.5" y="83.5" fill="grey"/>
+                <rect width="30" height="30" id="r3c3" x="83.5" y="83.5" fill="grey"/>
+                <rect width="30" height="30" id="r3c4" x="123.5" y="83.5" fill="grey"/>
+                <rect width="30" height="30" id="r3c5" x="163.5" y="83.5" fill="grey"/>
+                <rect width="30" height="30" id="r3c6" x="203.5" y="83.5" fill="grey"/>
+                <rect width="30" height="30" id="r3c7" x="243.5" y="83.5" fill="grey"/>
+                <rect width="30" height="30" id="r3c8" x="283.5" y="83.5" fill="grey"/>
                 
-                <rect width="30" height="30" id="r4c1" x="3.5" y="123.5" fill="transparent"/>
-                <rect width="30" height="30" id="r4c2" x="43.5" y="123.5" fill="transparent"/>
-                <rect width="30" height="30" id="r4c3" x="83.5" y="123.5" fill="transparent"/>
-                <rect width="30" height="30" id="r4c4" x="123.5" y="123.5" fill="transparent"/>
-                <rect width="30" height="30" id="r4c5" x="163.5" y="123.5" fill="transparent"/>
-                <rect width="30" height="30" id="r4c6" x="203.5" y="123.5" fill="transparent"/>
-                <rect width="30" height="30" id="r4c7" x="243.5" y="123.5" fill="transparent"/>
-                <rect width="30" height="30" id="r4c8" x="283.5" y="123.5" fill="transparent"/>
+                <rect width="30" height="30" id="r4c1" x="3.5" y="123.5" fill="grey"/>
+                <rect width="30" height="30" id="r4c2" x="43.5" y="123.5" fill="grey"/>
+                <rect width="30" height="30" id="r4c3" x="83.5" y="123.5" fill="grey"/>
+                <rect width="30" height="30" id="r4c4" x="123.5" y="123.5" fill="grey"/>
+                <rect width="30" height="30" id="r4c5" x="163.5" y="123.5" fill="grey"/>
+                <rect width="30" height="30" id="r4c6" x="203.5" y="123.5" fill="grey"/>
+                <rect width="30" height="30" id="r4c7" x="243.5" y="123.5" fill="grey"/>
+                <rect width="30" height="30" id="r4c8" x="283.5" y="123.5" fill="grey"/>
             
-                <rect width="30" height="30" id="r5c1" x="3.5" y="163.5" fill="transparent"/>
-                <rect width="30" height="30" id="r5c2" x="43.5" y="163.5" fill="transparent"/>
-                <rect width="30" height="30" id="r5c3" x="83.5" y="163.5" fill="transparent"/>
-                <rect width="30" height="30" id="r5c4" x="123.5" y="163.5" fill="transparent"/>
-                <rect width="30" height="30" id="r5c5" x="163.5" y="163.5" fill="transparent"/>
-                <rect width="30" height="30" id="r5c6" x="203.5" y="163.5" fill="transparent"/>
-                <rect width="30" height="30" id="r5c7" x="243.5" y="163.5" fill="transparent"/>
-                <rect width="30" height="30" id="r5c8" x="283.5" y="163.5" fill="transparent"/>
+                <rect width="30" height="30" id="r5c1" x="3.5" y="163.5" fill="grey"/>
+                <rect width="30" height="30" id="r5c2" x="43.5" y="163.5" fill="grey"/>
+                <rect width="30" height="30" id="r5c3" x="83.5" y="163.5" fill="grey"/>
+                <rect width="30" height="30" id="r5c4" x="123.5" y="163.5" fill="grey"/>
+                <rect width="30" height="30" id="r5c5" x="163.5" y="163.5" fill="grey"/>
+                <rect width="30" height="30" id="r5c6" x="203.5" y="163.5" fill="grey"/>
+                <rect width="30" height="30" id="r5c7" x="243.5" y="163.5" fill="grey"/>
+                <rect width="30" height="30" id="r5c8" x="283.5" y="163.5" fill="grey"/>
             
-                <rect width="30" height="30" id="r6c1" x="3.5" y="203.5" fill="transparent"/>
-                <rect width="30" height="30" id="r6c2" x="43.5" y="203.5" fill="transparent"/>
-                <rect width="30" height="30" id="r6c3" x="83.5" y="203.5" fill="transparent"/>
-                <rect width="30" height="30" id="r6c4" x="123.5" y="203.5" fill="transparent"/>
-                <rect width="30" height="30" id="r6c5" x="163.5" y="203.5" fill="transparent"/>
-                <rect width="30" height="30" id="r6c6" x="203.5" y="203.5" fill="transparent"/>
-                <rect width="30" height="30" id="r6c7" x="243.5" y="203.5" fill="transparent"/>
-                <rect width="30" height="30" id="r6c8" x="283.5" y="203.5" fill="transparent"/>
+                <rect width="30" height="30" id="r6c1" x="3.5" y="203.5" fill="grey"/>
+                <rect width="30" height="30" id="r6c2" x="43.5" y="203.5" fill="grey"/>
+                <rect width="30" height="30" id="r6c3" x="83.5" y="203.5" fill="grey"/>
+                <rect width="30" height="30" id="r6c4" x="123.5" y="203.5" fill="grey"/>
+                <rect width="30" height="30" id="r6c5" x="163.5" y="203.5" fill="grey"/>
+                <rect width="30" height="30" id="r6c6" x="203.5" y="203.5" fill="grey"/>
+                <rect width="30" height="30" id="r6c7" x="243.5" y="203.5" fill="grey"/>
+                <rect width="30" height="30" id="r6c8" x="283.5" y="203.5" fill="grey"/>
             
-                <rect width="30" height="30" id="r7c1" x="3.5" y="243.5" fill="transparent"/>
-                <rect width="30" height="30" id="r7c2" x="43.5" y="243.5" fill="transparent"/>
-                <rect width="30" height="30" id="r7c3" x="83.5" y="243.5" fill="transparent"/>
-                <rect width="30" height="30" id="r7c4" x="123.5" y="243.5" fill="transparent"/>
-                <rect width="30" height="30" id="r7c5" x="163.5" y="243.5" fill="transparent"/>
-                <rect width="30" height="30" id="r7c6" x="203.5" y="243.5" fill="transparent"/>
-                <rect width="30" height="30" id="r7c7" x="243.5" y="243.5" fill="transparent"/>
-                <rect width="30" height="30" id="r7c8" x="283.5" y="243.5" fill="transparent"/>
+                <rect width="30" height="30" id="r7c1" x="3.5" y="243.5" fill="grey"/>
+                <rect width="30" height="30" id="r7c2" x="43.5" y="243.5" fill="grey"/>
+                <rect width="30" height="30" id="r7c3" x="83.5" y="243.5" fill="grey"/>
+                <rect width="30" height="30" id="r7c4" x="123.5" y="243.5" fill="grey"/>
+                <rect width="30" height="30" id="r7c5" x="163.5" y="243.5" fill="grey"/>
+                <rect width="30" height="30" id="r7c6" x="203.5" y="243.5" fill="grey"/>
+                <rect width="30" height="30" id="r7c7" x="243.5" y="243.5" fill="grey"/>
+                <rect width="30" height="30" id="r7c8" x="283.5" y="243.5" fill="grey"/>
             
-                <rect width="30" height="30" id="r8c1" x="3.5" y="283.5" fill="transparent"/>
-                <rect width="30" height="30" id="r8c2" x="43.5" y="283.5" fill="transparent"/>
-                <rect width="30" height="30" id="r8c3" x="83.5" y="283.5" fill="transparent"/>
-                <rect width="30" height="30" id="r8c4" x="123.5" y="283.5" fill="transparent"/>
-                <rect width="30" height="30" id="r8c5" x="163.5" y="283.5" fill="transparent"/>
-                <rect width="30" height="30" id="r8c6" x="203.5" y="283.5" fill="transparent"/>
-                <rect width="30" height="30" id="r8c7" x="243.5" y="283.5" fill="transparent"/>
-                <rect width="30" height="30" id="r8c8" x="283.5" y="283.5" fill="transparent"/>
+                <rect width="30" height="30" id="r8c1" x="3.5" y="283.5" fill="grey"/>
+                <rect width="30" height="30" id="r8c2" x="43.5" y="283.5" fill="grey"/>
+                <rect width="30" height="30" id="r8c3" x="83.5" y="283.5" fill="grey"/>
+                <rect width="30" height="30" id="r8c4" x="123.5" y="283.5" fill="grey"/>
+                <rect width="30" height="30" id="r8c5" x="163.5" y="283.5" fill="grey"/>
+                <rect width="30" height="30" id="r8c6" x="203.5" y="283.5" fill="grey"/>
+                <rect width="30" height="30" id="r8c7" x="243.5" y="283.5" fill="grey"/>
+                <rect width="30" height="30" id="r8c8" x="283.5" y="283.5" fill="grey"/>
             </svg>
         </div>
     </div>

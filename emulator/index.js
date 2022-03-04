@@ -5,47 +5,46 @@ import { loadHex, buildHex } from './builder.js';
 const persist = 100;
 
 var stop = false;
+
 const codeArduino = document.getElementById('codeArduino');
 const runButton = document.getElementById('runButton');
 const stopButton = document.getElementById('stopButton');
 const compilingOutput = document.getElementById('compilingOutput');
 const display = document.getElementById('display');
-const matrix = []
-for (let i = 1; i <= 8; i++) {
-    let row = []
-    for (let j = 1; j <= 8; j++) {
-        row.push(display.querySelector(`#r${i}c${j}`))
-    }
-    matrix.push(row)
-}
-const colors = ['transparent', 'lime', 'red', 'orange']
+const matrix = new Array(64).fill(undefined).map((_, i) => display.querySelector(`#r${Math.floor(i / 8) + 1}c${i % 8 + 1}`))
+
+const colors = ['grey', 'lime', 'red', 'orange']
 const state = new Array(64).fill(0);
-const nextState = new Array(64).fill(0);
 const timeouts = new Array(64).fill(null);
 
 function updateMatrix(cathods, greens, reds) {
-    nextState.forEach((v, i) => nextState[i] = !cathods[Math.floor(i / 8)] && greens[i % 8] + (reds[i % 8] * 2))
-    nextState.forEach((v, i) => {
-        if (v !== state[i]) {
+    state.forEach((previous, i) => {
+        const next = (!cathods[Math.floor(i / 8)] && greens[i % 8] + reds[i % 8] * 2) + 0 // dirty :)
+        if (next != previous) {
             if (timeouts[i] !== null) {
                 clearTimeout(timeouts[i]);
                 timeouts[i] = null;
             }
-            if (v == 0) {
-                timeouts[i] = setTimeout(() => matrix[Math.floor(i / 8)][i % 8].setAttribute('fill', colors[v ? v : 0]), persist);
+            if (next == 0) {
+                timeouts[i] = setTimeout(() => matrix[i].setAttribute('fill', colors[next]), persist);
             } else {
-                matrix[Math.floor(i / 8)][i % 8].setAttribute('fill', colors[v ? v : 0]);
+                matrix[i].setAttribute('fill', colors[next]);
             }
         }
+        state[i] = next
     });
-    state.splice(0, 64, ...nextState);
 }
 
-runButton.addEventListener('click', () => run(codeArduino.value, updateMatrix, compilingOutput));
-stopButton.addEventListener('click', () => stop = true);
-
-async function run(code, updateMatrix, compilingOutput) {
+runButton.addEventListener('click', () => {
+    run(codeArduino.value);
+});
+stopButton.addEventListener('click', () => {
     stop = true;
+});
+
+async function run(code) {
+    stop = true;
+    runButton.setAttribute('disabled', 'true');
     const result = await buildHex(code);
     compilingOutput.textContent = result.stdout + result.stderr;
     const program = new Uint16Array(0x8000);
@@ -87,5 +86,6 @@ async function run(code, updateMatrix, compilingOutput) {
     }
 
     stop = false;
+    runButton.removeAttribute('disabled');
     runCode();
 }
