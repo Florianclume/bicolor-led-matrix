@@ -5,10 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Help - BiColor Matrix Simulator</title>
+    <style>
+        .images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media all and (max-width: 1024px) {
+            .images {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        .images img {
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <p>
         This web app use <a href="https://github.com/wokwi/avr8js">avr8js</a> to emulate the execution of an Arduino driving a <a href="https://www.adafruit.com/product/458">BiColor Led Matrix</a> with three 74HC595.
     </p>
+    <p>
+        Here is the wiring:
+    </p>
+    <div class="images">
+        <img src="img/bicolor-matrix-emulator-bb.png" alt="BiColor Matrix Wiring">
+        <img src="img/bicolor-matrix-emulator-scheme.png" alt="BiColor Matrix Wiring Scheme">
+    </div>
 </body>
 </html>
