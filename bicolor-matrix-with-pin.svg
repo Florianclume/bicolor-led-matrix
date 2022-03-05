@@ -1,6 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="31.7mm" height="31.7mm" viewBox="0 0 3170 3170">
     <rect width="3170" height="3170" fill="black"/>
 
+    <circle r="51" cy="385" cx="188" id="pin1" fill="dimgray"/>
+    <circle r="51" cy="385" cx="442" id="pin2" fill="dimgray"/>
+    <circle r="51" cy="385" cx="696" id="pin3" fill="dimgray"/>
+    <circle r="51" cy="385" cx="950" id="pin4" fill="dimgray"/>
+    <circle r="51" cy="385" cx="1204" id="pin5" fill="dimgray"/>
+    <circle r="51" cy="385" cx="1458" id="pin6" fill="dimgray"/>
+    <circle r="51" cy="385" cx="1712" id="pin7" fill="dimgray"/>
+    <circle r="51" cy="385" cx="1966" id="pin8" fill="dimgray"/>
+    <circle r="51" cy="385" cx="2220" id="pin9" fill="dimgray"/>
+    <circle r="51" cy="385" cx="2474" id="pin10" fill="dimgray"/>
+    <circle r="51" cy="385" cx="2728" id="pin11" fill="dimgray"/>
+    <circle r="51" cy="385" cx="2982" id="pin12" fill="dimgray"/>
+
+    <circle r="51" cy="2785" cx="188" id="pin13" fill="dimgray"/>
+    <circle r="51" cy="2785" cx="442" id="pin14" fill="dimgray"/>
+    <circle r="51" cy="2785" cx="696" id="pin15" fill="dimgray"/>
+    <circle r="51" cy="2785" cx="950" id="pin16" fill="dimgray"/>
+    <circle r="51" cy="2785" cx="1204" id="pin17" fill="dimgray"/>
+    <circle r="51" cy="2785" cx="1458" id="pin18" fill="dimgray"/>
+    <circle r="51" cy="2785" cx="1712" id="pin19" fill="dimgray"/>
+    <circle r="51" cy="2785" cx="1966" id="pin20" fill="dimgray"/>
+    <circle r="51" cy="2785" cx="2220" id="pin21" fill="dimgray"/>
+    <circle r="51" cy="2785" cx="2474" id="pin22" fill="dimgray"/>
+    <circle r="51" cy="2785" cx="2728" id="pin23" fill="dimgray"/>
+    <circle r="51" cy="2785" cx="2982" id="pin24" fill="dimgray"/>
+
     <rect width="300" height="300" id="r1c1" x="35" y="35" fill="lightgrey"/>
     <rect width="300" height="300" id="r1c2" x="435" y="35" fill="lightgrey"/>
     <rect width="300" height="300" id="r1c3" x="835" y="35" fill="lightgrey"/>
@@ -72,4 +98,6 @@
     <rect width="300" height="300" id="r8c6" x="2035" y="2835" fill="lightgrey"/>
     <rect width="300" height="300" id="r8c7" x="2435" y="2835" fill="lightgrey"/>
     <rect width="300" height="300" id="r8c8" x="2835" y="2835" fill="lightgrey"/>
+
+
 </svg>

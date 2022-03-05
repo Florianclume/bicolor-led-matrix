@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31.7mm" height="31.7mm" viewBox="0 0 3170 3170">
+    <g id="silkscreen">
+        <rect width="3170" height="3170" stroke="white" stroke-width="40" fill="none"/>
+    </g>
+    <g id="copper1">
+        <g id="copper0">
+            <circle r="76" cy="385" cx="188" id="pin1" stroke="#F7BD13" stroke-width="51" fill="none"/>
+            <circle r="76" cy="385" cx="442" id="pin2" stroke="#F7BD13" stroke-width="51" fill="none"/>
+            <circle r="76" cy="385" cx="696" id="pin3" stroke="#F7BD13" stroke-width="51" fill="none"/>
+            <circle r="76" cy="385" cx="950" id="pin4" stroke="#F7BD13" stroke-width="51" fill="none"/>
+            <circle r="76" cy="385" cx="1204" id="pin5" stroke="#F7BD13" stroke-width="51" fill="none"/>
+            <circle r="76" cy="385" cx="1458" id="pin6" stroke="#F7BD13" stroke-width="51" fill="none"/>
+            <circle r="76" cy="385" cx="1712" id="pin7" stroke="#F7BD13" stroke-width="51" fill="none"/>
+            <circle r="76" cy="385" cx="1966" id="pin8" stroke="#F7BD13" stroke-width="51" fill="none"/>
+            <circle r="76" cy="385" cx="2220" id="pin9" stroke="#F7BD13" stroke-width="51" fill="none"/>
+            <circle r="76" cy="385" cx="2474" id="pin10" stroke="#F7BD13" stroke-width="51" fill="none"/>
+            <circle r="76" cy="385" cx="2728" id="pin11" stroke="#F7BD13" stroke-width="51" fill="none"/>
+            <circle r="76" cy="385" cx="2982" id="pin12" stroke="#F7BD13" stroke-width="51" fill="none"/>
+
+            <circle r="76" cy="2785" cx="188" id="pin13" stroke="#F7BD13" stroke-width="51" fill="none"/>
+            <circle r="76" cy="2785" cx="442" id="pin14" stroke="#F7BD13" stroke-width="51" fill="none"/>
+            <circle r="76" cy="2785" cx="696" id="pin15" stroke="#F7BD13" stroke-width="51" fill="none"/>
+            <circle r="76" cy="2785" cx="950" id="pin16" stroke="#F7BD13" stroke-width="51" fill="none"/>
+            <circle r="76" cy="2785" cx="1204" id="pin17" stroke="#F7BD13" stroke-width="51" fill="none"/>
+            <circle r="76" cy="2785" cx="1458" id="pin18" stroke="#F7BD13" stroke-width="51" fill="none"/>
+            <circle r="76" cy="2785" cx="1712" id="pin19" stroke="#F7BD13" stroke-width="51" fill="none"/>
+            <circle r="76" cy="2785" cx="1966" id="pin20" stroke="#F7BD13" stroke-width="51" fill="none"/>
+            <circle r="76" cy="2785" cx="2220" id="pin21" stroke="#F7BD13" stroke-width="51" fill="none"/>
+            <circle r="76" cy="2785" cx="2474" id="pin22" stroke="#F7BD13" stroke-width="51" fill="none"/>
+            <circle r="76" cy="2785" cx="2728" id="pin23" stroke="#F7BD13" stroke-width="51" fill="none"/>
+            <circle r="76" cy="2785" cx="2982" id="pin24" stroke="#F7BD13" stroke-width="51" fill="none"/>
+        </g>
+    </g>
+</svg>

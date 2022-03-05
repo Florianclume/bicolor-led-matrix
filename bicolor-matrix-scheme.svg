@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31.7mm" height="31.7mm" viewBox="-2 -2 204 204">
+    <defs>
+        <g id="leds">
+            <path d="m 23 0 h -17 v 19" stroke="black" fill="none"/>
+            <path d="m 25 3 h -8 v 16" stroke="black" fill="none"/>
+            <path d="m 2 7 h 8 l -4 8 z m 0 8 h 8" stroke="black" fill="white"/>
+            <path d="m 13 7 h 8 l -4 8 z m 0 8 h 8" stroke="black" fill="black"/>
+        </g>
+    </defs>
+    <path d="M 0 22 h 192 M 0 47 h 192 M 0 72 h 192 M 0 97 h 192 M 0 122 h 192 M 0 147 h 192 M 0 172 h 192 M 0 197 h 192" stroke="black" stroke-linecap="square"/>
+    <path d="M 25 0 v 181 M 50 0 v 181 M 75 0 v 181 M 100 0 v 181 M 125 0 v 181 M 150 0 v 181 M 175 0 v 181 M 200 0 v 181" stroke="black" stroke-linecap="square"/>
+    <path d="M 23 3 v 175 M 48 3 v 175 M 73 3 v 175 M 98 3 v 175 M 123 3 v 175 M 148 3 v 175 M 173 3 v 175 M 198 3 v 175" stroke="black" stroke-linecap="square"/>
+    <path d="M 14 0 v 3 M 39 0 v 3 M 64 0 v 3 M 89 0 v 3 M 114 0 v 3 M 139 0 v 3 M 164 0 v 3 M 189 0 v 3" stroke="black" stroke-linecap="square"/>
+    <circle cx="14" r="2" id="pin24"/>
+    <circle cx="39" r="2" id="pin21"/>
+    <circle cx="64" r="2" id="pin18"/>
+    <circle cx="89" r="2" id="pin15"/>
+    <circle cx="114" r="2" id="pin1"/>
+    <circle cx="139" r="2" id="pin4"/>
+    <circle cx="164" r="2" id="pin7"/>
+    <circle cx="189" r="2" id="pin10"/>
+    <circle cx="25" r="2" id="pin23"/>
+    <circle cx="50" r="2" id="pin20"/>
+    <circle cx="75" r="2" id="pin17"/>
+    <circle cx="100" r="2" id="pin14"/>
+    <circle cx="125" r="2" id="pin2"/>
+    <circle cx="150" r="2" id="pin5"/>
+    <circle cx="175" r="2" id="pin8"/>
+    <circle cx="200" r="2" id="pin11"/>
+    <circle cy="22" r="2" id="pin22"/>
+    <circle cy="47" r="2" id="pin19"/>
+    <circle cy="72" r="2" id="pin16"/>
+    <circle cy="97" r="2" id="pin13"/>
+    <circle cy="122" r="2" id="pin3"/>
+    <circle cy="147" r="2" id="pin6"/>
+    <circle cy="172" r="2" id="pin9"/>
+    <circle cy="197" r="2" id="pin12"/>
+    <use x="0" y="3" href="#leds"/>
+    <use x="25" y="3" href="#leds"/>
+    <use x="50" y="3" href="#leds"/>
+    <use x="75" y="3" href="#leds"/>
+    <use x="100" y="3" href="#leds"/>
+    <use x="125" y="3" href="#leds"/>
+    <use x="150" y="3" href="#leds"/>
+    <use x="175" y="3" href="#leds"/>
+    <use x="0" y="28" href="#leds"/>
+    <use x="25" y="28" href="#leds"/>
+    <use x="50" y="28" href="#leds"/>
+    <use x="75" y="28" href="#leds"/>
+    <use x="100" y="28" href="#leds"/>
+    <use x="125" y="28" href="#leds"/>
+    <use x="150" y="28" href="#leds"/>
+    <use x="175" y="28" href="#leds"/>
+    <use x="0" y="53" href="#leds"/>
+    <use x="25" y="53" href="#leds"/>
+    <use x="50" y="53" href="#leds"/>
+    <use x="75" y="53" href="#leds"/>
+    <use x="100" y="53" href="#leds"/>
+    <use x="125" y="53" href="#leds"/>
+    <use x="150" y="53" href="#leds"/>
+    <use x="175" y="53" href="#leds"/>
+    <use x="0" y="78" href="#leds"/>
+    <use x="25" y="78" href="#leds"/>
+    <use x="50" y="78" href="#leds"/>
+    <use x="75" y="78" href="#leds"/>
+    <use x="100" y="78" href="#leds"/>
+    <use x="125" y="78" href="#leds"/>
+    <use x="150" y="78" href="#leds"/>
+    <use x="175" y="78" href="#leds"/>
+    <use x="0" y="103" href="#leds"/>
+    <use x="25" y="103" href="#leds"/>
+    <use x="50" y="103" href="#leds"/>
+    <use x="75" y="103" href="#leds"/>
+    <use x="100" y="103" href="#leds"/>
+    <use x="125" y="103" href="#leds"/>
+    <use x="150" y="103" href="#leds"/>
+    <use x="175" y="103" href="#leds"/>
+    <use x="0" y="128" href="#leds"/>
+    <use x="25" y="128" href="#leds"/>
+    <use x="50" y="128" href="#leds"/>
+    <use x="75" y="128" href="#leds"/>
+    <use x="100" y="128" href="#leds"/>
+    <use x="125" y="128" href="#leds"/>
+    <use x="150" y="128" href="#leds"/>
+    <use x="175" y="128" href="#leds"/>
+    <use x="0" y="153" href="#leds"/>
+    <use x="25" y="153" href="#leds"/>
+    <use x="50" y="153" href="#leds"/>
+    <use x="75" y="153" href="#leds"/>
+    <use x="100" y="153" href="#leds"/>
+    <use x="125" y="153" href="#leds"/>
+    <use x="150" y="153" href="#leds"/>
+    <use x="175" y="153" href="#leds"/>
+    <use x="0" y="178" href="#leds"/>
+    <use x="25" y="178" href="#leds"/>
+    <use x="50" y="178" href="#leds"/>
+    <use x="75" y="178" href="#leds"/>
+    <use x="100" y="178" href="#leds"/>
+    <use x="125" y="178" href="#leds"/>
+    <use x="150" y="178" href="#leds"/>
+    <use x="175" y="178" href="#leds"/>
+</svg>
