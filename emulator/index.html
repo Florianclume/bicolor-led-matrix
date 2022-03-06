@@ -33,6 +33,9 @@
             margin: 4em;
             min-width: 200px;
         }
+        .group {
+            display: inline-block;
+        }
     </style>
 </head>
 <body>
@@ -71,6 +74,9 @@ void loop()
 </textarea>
             <button id="runButton">Compile and Run</button>
             <button id="stopButton">Stop</button>
+            <div class="group">
+                <label for="persistenceRange">Persistence:</label><input type="range" id="persistenceRange" min="0" max="500" value="100"><span id="persistenceRangeValue">100ms</span>
+            </div>
             <p id="compilingOutput"></p>
         </div>
         <div class="column">
