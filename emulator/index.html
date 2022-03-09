@@ -74,9 +74,7 @@ void loop()
 </textarea>
             <button id="runButton">Compile and Run</button>
             <button id="stopButton">Stop</button>
-            <div class="group">
-                <label for="persistenceRange">Persistence:</label><input type="range" id="persistenceRange" min="0" max="500" value="100"><span id="persistenceRangeValue">100ms</span>
-            </div>
+            <label for="persistenceRange">Persistence:<input type="number" id="persistenceInput" min="0" max="500" value="100">ms</label>
             <p id="compilingOutput"></p>
         </div>
         <div class="column">

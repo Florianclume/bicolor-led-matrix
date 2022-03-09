@@ -9,14 +9,12 @@ const codeArduino = document.getElementById('codeArduino');
 const runButton = document.getElementById('runButton');
 const stopButton = document.getElementById('stopButton');
 const compilingOutput = document.getElementById('compilingOutput');
-const persistenceRange = document.getElementById('persistenceRange');
-const persistenceRangeValue = document.getElementById('persistenceRangeValue');
+const persistenceInput = document.getElementById('persistenceInput');
 const display = document.getElementById('display');
 const matrix = new Array(64).fill(undefined).map((_, i) => display.querySelector(`#r${Math.floor(i / 8) + 1}c${i % 8 + 1}`));
 
-persistenceRange.addEventListener('input', () => {
-    persistence = parseInt(persistenceRange.value, 10);
-    persistenceRangeValue.textContent = persistence + 'ms';
+persistenceInput.addEventListener('change', () => {
+    persistence = parseInt(persistenceInput.value, 10);
 });
 runButton.addEventListener('click', () => {
     run(codeArduino.value);
@@ -42,8 +40,8 @@ function updateMatrix(cathods, greens, reds) {
             } else {
                 matrix[i].setAttribute('fill', colors[next]);
             }
+            state[i] = next;
         }
-        state[i] = next;
     });
 }
 
