@@ -13,7 +13,7 @@ const persistenceInput = document.getElementById('persistenceInput');
 const display = document.getElementById('display');
 const matrix = new Array(64).fill(undefined).map((_, i) => display.querySelector(`#r${Math.floor(i / 8) + 1}c${i % 8 + 1}`));
 
-persistenceInput.addEventListener('change', () => {
+persistenceInput.addEventListener('input', () => {
     persistence = parseInt(persistenceInput.value, 10);
 });
 runButton.addEventListener('click', () => {
