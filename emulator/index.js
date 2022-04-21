@@ -2,10 +2,38 @@ import * as avr8js from './avr8js/index.js';
 import { SN74HC595 } from './sn74hc595.js';
 import { loadHex, buildHex } from './builder.js';
 
+const BASE_CODE = `const int rclk = 4;
+const int srclk = 3;
+const int ser = 2;
+
+void setup()
+{
+    pinMode(rclk, OUTPUT);
+    pinMode(srclk, OUTPUT);
+    pinMode(ser, OUTPUT);
+}
+
+
+void loop()
+{
+    for (int i = 0; i < 8; i++)
+    {
+        digitalWrite(rclk, LOW);
+        
+        shiftOut(ser, srclk, LSBFIRST, 0x01 << i);
+        shiftOut(ser, srclk, LSBFIRST, 0x01 << i);
+        shiftOut(ser, srclk, LSBFIRST, ~(0x01 << i));
+        
+        digitalWrite(rclk, HIGH);
+        
+        delay(5);
+    }
+}`
+
 var persistence = 100;
 var stop = false;
 
-const codeArduino = document.getElementById('codeArduino');
+const editorElement = document.getElementById('codeArduino');
 const runButton = document.getElementById('runButton');
 const stopButton = document.getElementById('stopButton');
 const compilingOutput = document.getElementById('compilingOutput');
@@ -13,11 +41,26 @@ const persistenceInput = document.getElementById('persistenceInput');
 const display = document.getElementById('display');
 const matrix = new Array(64).fill(undefined).map((_, i) => display.querySelector(`#r${Math.floor(i / 8) + 1}c${i % 8 + 1}`));
 
+
+let editor;
+window.require.config({
+    paths: {
+        vs: 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.26.1/min/vs'
+    }
+    });
+    window.require(['vs/editor/editor.main'], () => {
+    editor = monaco.editor.create(editorElement, {
+        value: BASE_CODE,
+        language: 'cpp',
+        minimap: { enabled: false }
+    });
+});
+
 persistenceInput.addEventListener('input', () => {
     persistence = parseInt(persistenceInput.value, 10);
 });
 runButton.addEventListener('click', () => {
-    run(codeArduino.value);
+    run(editor.getModel().getValue());
 });
 stopButton.addEventListener('click', () => {
     stop = true;
