@@ -52,7 +52,8 @@ window.require.config({
     editor = monaco.editor.create(editorElement, {
         value: BASE_CODE,
         language: 'cpp',
-        minimap: { enabled: false }
+        minimap: { enabled: false },
+        automaticLayout: true
     });
 });
 
